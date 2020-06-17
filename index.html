@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="./css/style.css">
+   <title>BT Shoes</title>
+</head>
+
+<body>
+
+   <aside id="cart" class="bg-light p-4 cart-collapse">
+      <div class="d-flex justify-content-between">
+         <button id="cart-toggler" class="btn btn-light">
+            <i class="fas fa-arrow-right"></i>
+         </button>
+         <button id="cart-menu" class="btn btn-light">
+            <i class="fas fa-ellipsis-h"></i>
+         </button>
+      </div>
+      <div class="card mt-4">
+         <div class="card-header">
+            <h3 class="card-title mb-0">My Cart</h3>
+         </div>
+         <div class="card-body">
+            <div class="d-flex justify-content-between">
+               <span class="font-weight-bold lead">Total</span>
+               <span class="font-weight-bold lead">&#8369;0</span>
+            </div>
+         </div>
+      </div>
+   </aside>
+
+   <nav id="main-nav" class="navbar navbar-expand-lg navbar-light fixed-top py-4">
+      <div class="container">
+         <a href="index.html" class="navbar-brand">
+            <h4>BT Shoes</h4>
+         </a>
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div id="navbar-menu" class="navbar-collapse collapse">
+            <ul class="navbar-nav mx-auto">
+               <li class="nav-item">
+                  <div class="input-group searchbar">
+                     <input type="search" class="form-control" placeholder="Search BT Shoes...">
+                     <div class="input-group-append">
+                        <button class="btn btn-dark">
+                           <i class="fas fa-search px-3"></i>
+                        </button>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a href="index.html" class="nav-link px-3 active">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link px-3">About</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link px-3">Contact</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" id="cart-btn" class="nav-link px-3 active">
+                     <i class="fas fa-shopping-cart"></i> My Cart
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <header id="showcase" class="text-dark py-4 d-flex align-items-center">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 text-left">
+               <div data-aos="fade-up" data-aos-once="true">
+                  <h1 class="display-2">One Shoe <br> Can Change Your Life</h1>
+                  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perspiciatis!</p>
+                  <a href="#" class="btn btn-outline-dark">Shop now</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <section id="sale" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <div data-aos="fade-up" data-aos-once="true">
+            <h2 class="section-title text-center">Time-Limited Christmas Sale!</h2>
+            <p class="sale-time-text text-center mb-4">
+               Sale ends in <span id="time-remaining" class="font-weight-bold">1day 4hours</span>
+            </p>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <img src="./img/sale.jpg" alt="" class="img-fluid" data-aos="fade-up" data-aos-once="true">
+            </div>
+            <div class="col-md-6 align-self-center" data-aos="fade-up" data-aos-once="true">
+               <h4 class="display-4">40% OFF</h4>
+               <h3>Black Mike Predator</h3>
+               <p class="sale-price font-weight-bold">
+                  <small><strike>&#8369;10,000</strike></small> &#8369;3,999
+               </p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam libero nesciunt explicabo,
+                  ipsum
+                  perferendis quasi! Et molestiae voluptates qui libero iusto reprehenderit officiis culpa similique
+                  maiores. Eum, repellendus voluptatum. Fuga autem maxime, voluptatum alias nulla et doloremque
+                  eveniet
+                  voluptatem!</p>
+               <hr class="my-1">
+               <div class="d-flex justify-content-start">
+                  <div class="px-3 pt-1">
+                     <a href="#" class="text-dark">
+                        <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                     </a>
+                  </div>
+                  <div class="px-3 pt-1">
+                     <a href="#" class="text-dark">
+                        <small><i class="far fa-heart"></i> Add to wishlist</small>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="subscribe" class="bg-white text-dark py-5">
+      <div class="container text-center my-5" data-aos="fade-up" data-aos-once="true">
+         <h2 class="section-title mb-4">Subscribe to get our next discount offers</h2>
+         <div class="row">
+            <div class="col-md-6 offset-md-3">
+               <form>
+                  <div class="form-group border border-dark mb-0">
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">
+                              <i class="fas fa-envelope fa-2x"></i>
+                           </span>
+                        </div>
+                        <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                        <div class="input-group-append">
+                           <input type="submit" value="Subscribe" class="btn btn-dark">
+                        </div>
+                     </div>
+                  </div>
+                  <small class="text-muted">We wil not spam or share your email</small>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="featured" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <div data-aos="fade-up" data-aos-once="true">
+            <h2 class="section-title text-center">Featured Shoes</h2>
+            <p class=" text-center mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quo commodi
+               excepturi!</p>
+         </div>
+         <div class="row">
+            <div class="col featured-slider" data-aos="fade-up" data-aos-once="true">
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="img-container">
+                        <img src="./img/shoe1.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet
+                           consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;2,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-sale">
+                        <small>Sale 40% OFF</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe2.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;7,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="img-container">
+                        <img src="./img/shoe3.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;6,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-best-seller">
+                        <small>Bestseller</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe4.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;9,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="img-container">
+                        <img src="./img/shoe5.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet
+                           consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;2,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-highest-rated">
+                        <small>Highest Rated</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe6.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;7,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="img-container">
+                        <img src="./img/shoe7.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet
+                           consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;2,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-hot">
+                        <small>Hot</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe8.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet
+                           consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;2,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="statistics" class="bg-white text-dark py-5">
+      <div class="container text-center my-5">
+         <h2 class="section-title text-center mb-4">BT Shoes Brings Out The Best Of You</h2>
+         <div class="row">
+            <div class="col-md-3">
+               <p class="stat-number mb-1 counter">2000</p>
+               <p class="stat-text">Happy Customers</p>
+            </div>
+            <div class="col-md-3">
+               <p class="stat-number mb-1 counter">209</p>
+               <p class="stat-text">Branches</p>
+            </div>
+            <div class="col-md-3">
+               <p class="stat-number mb-1 counter">9000</p>
+               <p class="stat-text">Partners</p>
+            </div>
+            <div class="col-md-3">
+               <p class="stat-number mb-1 counter">29</p>
+               <p class="stat-text">Awards</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="newArrival" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <div data-aos="fade-up" data-aos-once="true">
+            <h2 class="section-title text-center">New Arrival</h2>
+            <p class=" text-center mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quo commodi
+               excepturi!</p>
+         </div>
+         <div class="row">
+            <div class="col featured-slider" data-aos="fade-up" data-aos-once="true">
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-new">
+                        <small>New</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe9.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet
+                           consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;2,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-new">
+                        <small>New</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe10.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;9,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-new">
+                        <small>New</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe11.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;6,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-new">
+                        <small>New</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe12.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;7,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mb-3">
+                  <div class="card border-0">
+                     <div class="custom-badge badge-new">
+                        <small>New</small>
+                     </div>
+                     <div class="img-container">
+                        <img src="./img/shoe13.jpg" class="card-img-top">
+                     </div>
+                     <div class="card-body bg-light pt-0">
+                        <a href="#" class="card-text text-capitalize text-dark">Lorem ipsum dolor, sit amet consectetur
+                           adipisicing</a>
+                        <div class="d-flex justify-content-between mt-1">
+                           <span class="font-weight-bold">&#8369;7,999</span>
+                           <div class="d-flex flex-column">
+                              <span>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                              </span>
+                              <small class="text-right">29 ratings</small>
+                           </div>
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex justify-content-between">
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="far fa-heart"></i> Add to wishlist</small>
+                              </a>
+                           </div>
+                           <div class="px-2">
+                              <a href="#" class="text-dark">
+                                 <small><i class="fas fa-shopping-cart"></i> Add to cart</small>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="testimonials" class="bg-white text-dark py-5">
+      <div class="container text-center my-5">
+         <h2 class="section-title mb-4" data-aos="fade-up" data-aos-once="true">Testimonials</h2>
+         <div class="row">
+            <div class="col-md-6 offset-3 testimonial-slider" data-aos="fade-up" data-aos-once="true">
+
+               <div class="card border-0">
+                  <img src="./img/testimonial1.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <blockquote class="blockquote">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta sed consequatur blanditiis
+                        cumque illo repellat beatae commodi earum quasi quae, obcaecati corrupti ducimus ullam
+                        maiores velit unde ad ipsam labore.
+                        <footer class="blockquote-footer">
+                           Jane Doe
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial2.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <blockquote class="blockquote">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam minima temporibus repellendus
+                        explicabo. Id, odio soluta nisi et ipsum laboriosam? Consectetur quasi ullam aperiam?
+                        Cupiditate!
+                        <footer class="blockquote-footer">
+                           William Smith
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial3.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <blockquote class="blockquote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minus non quia fugit ipsa
+                        nesciunt iste voluptatum, quod quos ratione ea, placeat inventore. Quod earum odio voluptatem
+                        perferendis sequi unde ducimus aperiam modi, quaerat illo? Voluptates quis atque assumenda
+                        iure!
+                        <footer class="blockquote-footer">
+                           Samantha Gray
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial4.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <blockquote class="blockquote">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur commodi fuga similique
+                        dicta. Officiis dignissimos dolores placeat iste mollitia corrupti aut nihil?
+                        <footer class="blockquote-footer">
+                           Margarette Break
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial5.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <!-- <p class="text-muted">Jane Doe</p> -->
+                     <blockquote class="blockquote">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id sit ipsam pariatur tempore modi
+                        repellat, laboriosam deleniti distinctio quod consequuntur facilis, similique optio nobis
+                        molestiae debitis natus quidem dolores esse? Sequi neque ad ab veritatis porro dolorem quis
+                        dolores voluptas, aut perferendis eligendi incidunt quidem!
+                        <footer class="blockquote-footer">
+                           Mark Gates
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial6.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <!-- <p class="text-muted">Jane Doe</p> -->
+                     <blockquote class="blockquote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tenetur voluptatibus qui
+                        minus quia aperiam quisquam maiores quo non illo laboriosam consequatur culpa blanditiis
+                        consequuntur suscipit doloremque, enim quaerat dolore repellendus recusandae cumque.
+                        <footer class="blockquote-footer">
+                           Elon Zuckerberg
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="card border-0">
+                  <img src="./img/testimonial7.jpg" alt="" class="card-img-top w-25 mx-auto rounded-circle">
+                  <div class="card-body">
+                     <!-- <p class="text-muted">Jane Doe</p> -->
+                     <blockquote class="blockquote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sunt dolores ipsa? Ipsum
+                        deserunt quis veritatis facilis aliquam!
+                        <footer class="blockquote-footer">
+                           Bill Musk
+                        </footer>
+                     </blockquote>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="bt-shoes" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <div class="row">
+            <div class="col-md-6" data-aos="fade-left" data-aos-once="true">
+               <h1 class="display-4">BT Shoes</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis distinctio mollitia, sed
+                  quia est. Optio placeat quae in molestiae animi obcaecati saepe maxime, praesentium expedita sit quia
+                  excepturi.</p>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quam soluta amet excepturi dolorem,
+                  nostrum magni eaque minima necessitatibus tempore impedit, incidunt nihil nam iusto magnam officiis
+                  tenetur voluptas.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores blanditiis unde numquam quis, sint
+                  minus
+                  molestias doloribus excepturi, delectus cum error laborum libero labore eum atque itaque, nesciunt
+                  tempora!
+               </p>
+            </div>
+            <div class="col-md-6" data-aos="fade-right" data-aos-once="true">
+               <img src="./img/showcase.jpg" class="img-fluid">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="blog" class="bg-white text-dark py-5">
+      <div class="container my-5">
+         <h2 class="section-title text-center mb-4" data-aos="fade-up" data-aos-once="true">Read Our Blog</h2>
+         <div class="blogs-slider" data-aos="fade-up" data-aos-once="true">
+            <div class="card bg-light border-0 mx-3">
+               <img src="https://source.unsplash.com/random/1080x768" alt="" class="card-img-top img-fluid">
+               <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="text-dark">Blog Post One</a></h5>
+                  <small class="text-muted">Written Cromuel Barut &nbsp;&nbsp;&nbsp;-March 2, 2009</small>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                     molestiae
+                     nemo reiciendis
+                     excepturi corporis accusantium!</p>
+               </div>
+            </div>
+            <div class="card bg-light border-0 mx-3">
+               <img src="https://source.unsplash.com/random/1081x769" alt="" class="card-img-top img-fluid">
+               <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="text-dark">Blog Post Two</a></h5>
+                  <small class="text-muted">Written Cromuel Barut &nbsp;&nbsp;&nbsp;-March 2, 2009</small>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                     molestiae
+                     nemo reiciendis
+                     excepturi corporis accusantium!</p>
+               </div>
+            </div>
+            <div class="card bg-light border-0 mx-3">
+               <img src="https://source.unsplash.com/random/1082x770" alt="" class="card-img-top img-fluid">
+               <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="text-dark">Blog Post Three</a></h5>
+                  <small class="text-muted">Written Cromuel Barut &nbsp;&nbsp;&nbsp;-March 2, 2009</small>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                     molestiae
+                     nemo reiciendis
+                     excepturi corporis accusantium!</p>
+               </div>
+            </div>
+            <div class="card bg-light border-0 mx-3">
+               <img src="https://source.unsplash.com/random/1083x771" alt="" class="card-img-top img-fluid">
+               <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="text-dark">Blog Post Four</a></h5>
+                  <small class="text-muted">Written Cromuel Barut &nbsp;&nbsp;&nbsp;-March 2, 2009</small>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                     molestiae
+                     nemo reiciendis
+                     excepturi corporis accusantium!</p>
+               </div>
+            </div>
+            <!-- <div class="card bg-light border-0 mx-3">
+               <img src="https://source.unsplash.com/random/1082x769" alt="" class="card-img-top img-fluid">
+               <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="text-dark">Blog Post One</a></h5>
+                  <small class="text-muted">Written Cromuel Barut &nbsp;&nbsp;&nbsp;-March 2, 2009</small>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                     molestiae
+                     nemo reiciendis
+                     excepturi corporis accusantium!</p>
+               </div>
+            </div> -->
+         </div>
+      </div>
+   </section>
+
+   <footer id="main-footer" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <div class="row">
+            <div class="col-md-3">
+               <a href="index.html" class="text-dark">
+                  <h1>BT Shoes</h1>
+               </a>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam aliquam amet quae commodi sed
+                  labore fugiat eos libero ipsum?</p>
+            </div>
+            <div class="col-md-3">
+               <h3>Follow Us</h3>
+               <div class="social-medias d-flex flex-column align-items-center">
+                  <div class="p-2">
+                     <a href="#" class="text-dark">
+                        <i class="fab fa-facebook"></i>
+                     </a>
+                  </div>
+                  <div class="p-2">
+                     <a href="#" class="text-dark">
+                        <i class="fab fa-twitter"></i>
+                     </a>
+                  </div>
+                  <div class="p-2">
+                     <a href="#" class="text-dark">
+                        <i class="fab fa-instagram"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <h3>Subscribe</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cum consequuntur earum.</p>
+               <form>
+                  <div class="form-group">
+                     <div class="input-group">
+                        <!-- <div class="input-group-prepend">
+                           <span class="input-group-text">
+                              <i class="fas fa-envelope"></i>
+                           </span>
+                        </div> -->
+                        <input type="email" class="form-control border border-dark" placeholder="Email...">
+                        <div class="input-group-append">
+                           <input type="submit" value="Subscribe" class="btn btn-dark">
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="col-md-3">
+               <h3>Help</h3>
+               <div class="social-medias d-flex flex-column align-items-start">
+                  <div class="p-2">
+                     <a href="#" class="text-dark">Terms & Conditions</a>
+                  </div>
+                  <div class="p-2">
+                     <a href="#" class="text-dark">Cancellation & Refunds</a>
+                  </div>
+                  <div class="p-2">
+                     <a href="#" class="text-dark">FAQs</a>
+                  </div>
+                  <div class="p-2">
+                     <a href="#" class="text-dark">Privacy Policy</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script src="./js/countUp.js"></script>
+   <script src="./js/countUp-jquery.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script src="./js/app.js"></script>
+</body>
+
+</html>

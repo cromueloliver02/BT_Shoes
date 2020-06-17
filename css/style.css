@@ -1,0 +1,151 @@
+/* e8e9eb */
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#cart i.fas {
+   font-size: 1.25rem;
+}
+
+#main-nav {
+   transition: all 0.5s ease-in-out;
+}
+.main-nav-shadow {
+   box-shadow: 0px 0px 5px;
+}
+#main-nav a.nav-link {
+   font-size: 1.25rem;
+}
+.searchbar {
+   width: 475px;
+}
+
+#cart {
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100%;
+   width: 500px;
+   z-index: 1031;
+   transition: transform 0.5s ease-in-out;
+}
+.cart-collapse {
+   transform: translateX(500px);
+}
+
+#showcase {
+   height: 100vh;
+   background: url('../img/showcase_light.jpg')
+               no-repeat
+               center
+               center/cover;
+}
+
+/* CUSTOM BADGE */
+#featured .card,
+#newArrival .card {
+   position: relative;
+}
+.custom-badge {
+   --best-seller: rgba(255, 231, 153, 0.75);
+   --best-seller-text: #593d00;
+   --highest-rated: rgba(255, 196, 140, 0.75);
+   --highest-rated-text: #592b00;
+   --new: rgba(153, 219, 170, 0.75);
+   --new-text: #003b0f;
+   --hot: rgba(255, 153, 153, 0.75);
+   --hot-text: #521818;
+   --sale: rgba(220, 252, 106, 0.75);
+   --sale-text: rgb(109, 139, 0);
+}
+.custom-badge {
+   color: #333;
+   display: inline-block;
+   padding: 0.25rem 0.4rem;
+   position: absolute;
+   top: 10px;
+   left: 0;
+   border-radius: 5px;
+   z-index: 1;
+}
+.custom-badge small {
+   font-weight: bold !important;
+}
+.badge-best-seller {
+   background: var(--best-seller);
+   color: var(--best-seller-text);
+}
+.badge-highest-rated {
+   background: var(--highest-rated);
+   color: var(--highest-rated-text);
+}
+.badge-new {
+   background: var(--new);
+   color: var(--new-text);
+}
+.badge-hot {
+   background: var(--hot);
+   color: var(--hot-text);
+}
+.badge-sale {
+   background: var(--sale);
+   color: var(--sale-text);
+}
+
+/* FEATURED & NEW ARRIVAL */
+.img-container {
+   overflow: hidden;
+}
+.card img {
+   transition: transform 0.25s;
+}
+#featured .card img:hover,
+#newArrival .card img:hover {
+   transform: scale(1.1);
+}
+
+.section-title {
+   font-size: 2.5rem;
+}
+
+.sale-time-text {
+   font-size: 1.25rem;
+}
+
+.sale-price {
+   font-size: 1.5rem;
+}
+
+.slick-arrow::before {
+   color: #333;
+   font-size: 1.5rem;
+}
+
+.stat-text {
+   font-size: 1.25rem;
+}
+.stat-number {
+   font-size: 2rem;
+}
+
+.social-medias i {
+   font-size: 1.25rem;
+}
