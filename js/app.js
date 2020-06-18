@@ -22,7 +22,6 @@ $(document).ready(function () {
    } else {
       solidNav();
    }
-   const navbarMenu = document.getElementById('navbar-menu');
    window.addEventListener('scroll', function () {
       if (getViewportTopDistance() < 5) {
          deafultNav();
@@ -64,8 +63,9 @@ $(document).ready(function () {
 
    // BIG SALE COUNTDOWN
    function getRealTime() {
-      // const deadline = new Date('June 30, 2020 0:0:0').getTime();
-      const deadline = 1592539200000;
+      // const deadline = new Date('June 21, 2020 0:0:0').getTime();
+      // console.log(deadline);
+      const deadline = 1592668800000;
       const now = new Date().getTime();
       const t = deadline - now;
       const days = Math.floor(t / (1000 * 60 * 60 * 24));
