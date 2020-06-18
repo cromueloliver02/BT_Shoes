@@ -64,9 +64,9 @@ $(document).ready(function () {
       document.getElementById('time-remaining').innerText = `${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`;
    }
 
-   setInterval(() => {
-      getRealTime();
-   }, 1000);
+   // setInterval(() => {
+   //    getRealTime();
+   // }, 1000);
 
    // FEATURED PRODUCTS AND NEW ARRIVAL SLIDER
    $('.featured-slider').slick({
@@ -74,7 +74,32 @@ $(document).ready(function () {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000
+      autoplaySpeed: 5000,
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 600,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
    });
 
    // BLOGS SLIDER
@@ -83,7 +108,32 @@ $(document).ready(function () {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000
+      autoplaySpeed: 5000,
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 600,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
    });
 
    // TESTIMONIAL SLIDER
@@ -95,26 +145,44 @@ $(document).ready(function () {
       infinite: true,
       speed: 500,
       fade: true,
-      cssEase: 'linear'
+      cssEase: 'linear',
+      // responsive: [
+      //    {
+      //       breakpoint: 600,
+      //       settings: {
+      //          slidesToShow: 1,
+      //          slidesToScroll: 1,
+      //          infinite: true
+      //       }
+      //    },
+      //    {
+      //       breakpoint: 480,
+      //       settings: {
+      //          slidesToShow: 1,
+      //          slidesToScroll: 1,
+      //          infinite: true
+      //       }
+      //    }
+      // ]
    });
 
    // AOS
    AOS.init();
 
-   const statsTopOffset = $("#statistics").offset().top;
-   let countUpFinished = false;
-   $(window).scroll(function () {
-      if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
-         $(".counter").each(function () {
-            const element = $(this);
-            const endVal = parseInt(element.text());
+   // const statsTopOffset = $("#statistics").offset().top;
+   // let countUpFinished = false;
+   // $(window).scroll(function () {
+   //    if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+   //       $(".counter").each(function () {
+   //          const element = $(this);
+   //          const endVal = parseInt(element.text());
 
-            element.countup(endVal);
-         })
+   //          element.countup(endVal);
+   //       })
 
-         countUpFinished = true;
-      }
-   });
+   //       countUpFinished = true;
+   //    }
+   // });
 
    // CART
    document.getElementById('cart-toggler').addEventListener('click', function () {
@@ -133,13 +201,17 @@ $(document).ready(function () {
       e.preventDefault();
    });
 
-   // const cartSection = document.getElementById('cart');
-   // document.addEventListener('click', function (e) {
-   //    if (e.target !== cartSection) {
-   //       console.log(e.target);
-   //       cartSection.classList.add('cart-collapse');
-   //    }
-
-   //    e.preventDefault();
-   // });
+   // const cartSidebar = document.getElementById('cart');
+   // function outsideCartSidebar(e) {
+   //    // if (e.target == cartSidebar) {
+   //    //    console.log(2);
+   //       // cartSidebar.classList.toggle('cart-collapse');
+   //    // }
+   // }
+   // cartSidebar.addEventListener('click', outsideCartSidebar);
+   const darkOverlay = document.querySelector('.dark-overlay');
+   darkOverlay.addEventListener('click', function () {
+      document.getElementById('cart').classList.toggle('cart-collapse');
+      document.querySelector('.dark-overlay').classList.replace('dark-overlay-d-block', 'dark-overlay-d-none');
+   });
 });
