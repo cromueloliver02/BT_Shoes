@@ -48,12 +48,12 @@ body {
    top: 0;
    right: 0;
    height: 100%;
-   width: 500px;
+   width: 400px;
    z-index: 1032;
    transition: transform 0.5s ease-in-out;
 }
 .cart-collapse {
-   transform: translateX(500px);
+   transform: translateX(400px);
 }
 .dark-overlay {
    position: fixed;
@@ -182,6 +182,10 @@ body {
 @media(max-width: 768px) {
    .mb-md-3 {
       margin-bottom: 1rem;
+   }
+
+   .searchbar {
+      width: 100%;
    }
 
    #featured .add-box,

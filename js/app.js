@@ -22,17 +22,14 @@ $(document).ready(function () {
    } else {
       solidNav();
    }
+   const navbarMenu = document.getElementById('navbar-menu');
    window.addEventListener('scroll', function () {
-      // if (this.scrollY < 5) {
-      //    deafultNav();
-      // } else {
-      //    solidNav();
-      // }
       if (getViewportTopDistance() < 5) {
          deafultNav();
       } else {
          solidNav();
       }
+      // document.querySelector('.dark-overlay').classList.replace('dark-overlay-d-block', 'dark-overlay-d-none');
    });
 
    /* SMOOTH SCROLLING */
@@ -51,6 +48,20 @@ $(document).ready(function () {
       }
    });
 
+   // NAVBAR TOGGLER
+   const navbar = document.getElementById('main-nav');
+   function toggleNavbar() {
+      if (getViewportTopDistance() < 5) {
+         document.getElementById('main-nav').classList.toggle('navbar-solid');
+         document.getElementById('main-nav').classList.toggle('bg-light');
+      }
+   }
+   navbar.addEventListener('click', function (e) {
+      if (e.target.classList.contains('navbar-toggler') || e.target.parentElement.classList.contains('navbar-toggler')) {
+         toggleNavbar();
+      }
+   });
+
    // BIG SALE COUNTDOWN
    function getRealTime() {
       // const deadline = new Date('June 30, 2020 0:0:0').getTime();
@@ -64,9 +75,9 @@ $(document).ready(function () {
       document.getElementById('time-remaining').innerText = `${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`;
    }
 
-   // setInterval(() => {
-   //    getRealTime();
-   // }, 1000);
+   setInterval(() => {
+      getRealTime();
+   }, 1000);
 
    // FEATURED PRODUCTS AND NEW ARRIVAL SLIDER
    $('.featured-slider').slick({
@@ -145,44 +156,26 @@ $(document).ready(function () {
       infinite: true,
       speed: 500,
       fade: true,
-      cssEase: 'linear',
-      // responsive: [
-      //    {
-      //       breakpoint: 600,
-      //       settings: {
-      //          slidesToShow: 1,
-      //          slidesToScroll: 1,
-      //          infinite: true
-      //       }
-      //    },
-      //    {
-      //       breakpoint: 480,
-      //       settings: {
-      //          slidesToShow: 1,
-      //          slidesToScroll: 1,
-      //          infinite: true
-      //       }
-      //    }
-      // ]
+      cssEase: 'linear'
    });
 
    // AOS
    AOS.init();
 
-   // const statsTopOffset = $("#statistics").offset().top;
-   // let countUpFinished = false;
-   // $(window).scroll(function () {
-   //    if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
-   //       $(".counter").each(function () {
-   //          const element = $(this);
-   //          const endVal = parseInt(element.text());
+   const statsTopOffset = $("#statistics").offset().top;
+   let countUpFinished = false;
+   $(window).scroll(function () {
+      if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+         $(".counter").each(function () {
+            const element = $(this);
+            const endVal = parseInt(element.text());
 
-   //          element.countup(endVal);
-   //       })
+            element.countup(endVal);
+         })
 
-   //       countUpFinished = true;
-   //    }
-   // });
+         countUpFinished = true;
+      }
+   });
 
    // CART
    document.getElementById('cart-toggler').addEventListener('click', function () {
