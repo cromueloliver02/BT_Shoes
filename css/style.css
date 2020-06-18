@@ -28,7 +28,8 @@
 #main-nav {
    transition: all 0.5s ease-in-out;
 }
-.main-nav-shadow {
+
+.navbar-solid {
    box-shadow: 0px 0px 5px;
 }
 #main-nav a.nav-link {
@@ -44,11 +45,29 @@
    right: 0;
    height: 100%;
    width: 500px;
-   z-index: 1031;
+   z-index: 1032;
    transition: transform 0.5s ease-in-out;
 }
 .cart-collapse {
    transform: translateX(500px);
+}
+.dark-overlay {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   z-index: 1031;
+   transition: all 1s ease-in-out;
+}
+.dark-overlay-d-none {
+   display: none;
+   /* opacity: 0; */
+}
+.dark-overlay-d-block {
+   display: block;
+   /* opacity: 1; */
 }
 
 #showcase {

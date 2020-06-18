@@ -1,12 +1,53 @@
 $(document).ready(function () {
    // SCROLL ANIMATION
+   function deafultNav() {
+      document.getElementById('main-nav').classList.remove('navbar-solid');
+      document.getElementById('main-nav').classList.remove('bg-light');
+      document.getElementById('main-nav').classList.replace('py-3', 'py-4');
+   }
+   function solidNav() {
+      document.getElementById('main-nav').classList.add('navbar-solid');
+      document.getElementById('main-nav').classList.add('bg-light');
+      document.getElementById('main-nav').classList.replace('py-4', 'py-3');
+   }
+   function getViewportTopDistance() {
+      const scrollTop = $(window).scrollTop(),
+         elementOffset = $('#showcase').offset().top,
+         distance = (scrollTop - elementOffset);
+
+      return distance;
+   }
+   if (getViewportTopDistance() < 5) {
+      deafultNav();
+   } else {
+      solidNav();
+   }
    window.addEventListener('scroll', function () {
-      if (this.scrollY < 2) {
-         document.getElementById('main-nav').classList.remove('bg-light');
-         document.getElementById('main-nav').classList.remove('main-nav-shadow');
+      // if (this.scrollY < 5) {
+      //    deafultNav();
+      // } else {
+      //    solidNav();
+      // }
+      if (getViewportTopDistance() < 5) {
+         deafultNav();
       } else {
-         document.getElementById('main-nav').classList.add('bg-light');
-         document.getElementById('main-nav').classList.add('main-nav-shadow');
+         solidNav();
+      }
+   });
+
+   /* SMOOTH SCROLLING */
+   $('a').on('click', function (event) {
+      if (this.hash !== '') {
+         event.preventDefault();
+
+         const hash = this.hash;
+
+         $('html, body').animate(
+            {
+               scrollTop: $(hash).offset().top - 70
+            },
+            800
+         );
       }
    });
 
@@ -75,15 +116,30 @@ $(document).ready(function () {
       }
    });
 
+   // CART
    document.getElementById('cart-toggler').addEventListener('click', function () {
       document.getElementById('cart').classList.toggle('cart-collapse');
+      document.querySelector('.dark-overlay').classList.replace('dark-overlay-d-block', 'dark-overlay-d-none');
+      // setTimeout(() => {
+      //    document.querySelector('.dark-overlay').classList.add('d-none')
+      // }, 1000);
    });
-
    document.getElementById('navbar-menu').addEventListener('click', function (e) {
       if (e.target.id === 'cart-btn' || e.target.parentElement.id === 'cart-btn') {
          document.getElementById('cart').classList.toggle('cart-collapse');
+         document.querySelector('.dark-overlay').classList.replace('dark-overlay-d-none', 'dark-overlay-d-block');
       }
 
       e.preventDefault();
    });
+
+   // const cartSection = document.getElementById('cart');
+   // document.addEventListener('click', function (e) {
+   //    if (e.target !== cartSection) {
+   //       console.log(e.target);
+   //       cartSection.classList.add('cart-collapse');
+   //    }
+
+   //    e.preventDefault();
+   // });
 });
