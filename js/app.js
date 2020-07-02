@@ -74,7 +74,7 @@ $(document).ready(function () {
     let seconds = Math.floor((t % (1 * 60)) / 1);
     document.getElementById(
       'time-remaining'
-    ).innerText = `${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`;
+    ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
   setInterval(() => {
