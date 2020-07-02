@@ -65,16 +65,15 @@ $(document).ready(function () {
   });
 
   // BIG SALE COUNTDOWN
-  let t = 229929;
+  let t = 29292;
   function getRealTime() {
     t -= 1;
-    let days = Math.floor(t / (1 * 60 * 60 * 24));
     let hours = Math.floor((t % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
     let minutes = Math.floor((t % (1 * 60 * 60)) / (1 * 60));
     let seconds = Math.floor((t % (1 * 60)) / 1);
     document.getElementById(
       'time-remaining'
-    ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    ).innerText = `${hours}h ${minutes}m ${seconds}s`;
   }
 
   setInterval(() => {
