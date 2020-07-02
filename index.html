@@ -15,7 +15,7 @@
    <title>BT Shoes</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav" data-offset="180">
 
    <!-- CART SIDEBAR -->
    <aside id="cart" class="bg-light p-4 cart-collapse">
@@ -65,13 +65,13 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                <li class="nav-item">
-                  <a href="index.html" class="nav-link px-3 active">Home</a>
+                  <a href="#showcase" class="nav-link px-3">Home</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-link px-3">About</a>
+                  <a href="#about" class="nav-link px-3">About</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-link px-3">Contact</a>
+                  <a href="#contact" class="nav-link px-3">Contact</a>
                </li>
                <li class="nav-item">
                   <a href="#" id="cart-btn" class="nav-link px-3 active">
@@ -839,31 +839,6 @@
       </div>
    </section>
 
-   <!-- BT SHOES -->
-   <section id="bt-shoes" class="bg-light text-dark py-5">
-      <div class="container my-5">
-         <div class="row">
-            <div class="col-md-6" data-aos="fade-up" data-aos-once="true">
-               <h1 class="display-4">BT Shoes</h1>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis distinctio mollitia, sed
-                  quia est. Optio placeat quae in molestiae animi obcaecati saepe maxime, praesentium expedita sit quia
-                  excepturi.</p>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quam soluta amet excepturi dolorem,
-                  nostrum magni eaque minima necessitatibus tempore impedit, incidunt nihil nam iusto magnam officiis
-                  tenetur voluptas.</p>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores blanditiis unde numquam quis, sint
-                  minus
-                  molestias doloribus excepturi, delectus cum error laborum libero labore eum atque itaque, nesciunt
-                  tempora!
-               </p>
-            </div>
-            <div class="col-md-6 align-self-center" data-aos="fade-up" data-aos-once="true">
-               <img src="./img/showcase.jpg" class="img-fluid">
-            </div>
-         </div>
-      </div>
-   </section>
-
    <!-- BLOG -->
    <section id="blog" class="bg-light text-dark py-5">
       <div class="container my-5">
@@ -918,6 +893,83 @@
                </div>
             </div>
          </div>
+      </div>
+   </section>
+
+   <!-- ABOUT -->
+   <section id="about" class="bg-white text-dark py-5">
+      <div class="container my-5">
+         <div class="row">
+            <div class="col-md-6" data-aos="fade-up" data-aos-once="true">
+               <h1 class="display-4">BT Shoes</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis distinctio mollitia, sed
+                  quia est. Optio placeat quae in molestiae animi obcaecati saepe maxime, praesentium expedita sit quia
+                  excepturi.</p>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quam soluta amet excepturi dolorem,
+                  nostrum magni eaque minima necessitatibus tempore impedit, incidunt nihil nam iusto magnam officiis
+                  tenetur voluptas.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores blanditiis unde numquam quis, sint
+                  minus
+                  molestias doloribus excepturi, delectus cum error laborum libero labore eum atque itaque, nesciunt
+                  tempora!
+               </p>
+            </div>
+            <div class="col-md-6 align-self-center" data-aos="fade-up" data-aos-once="true">
+               <img src="./img/showcase.jpg" class="img-fluid">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- CONTACT -->
+   <section id="contact" class="bg-light text-dark py-5">
+      <div class="container my-5">
+         <h2 class="section-title text-center mb-4" data-aos="fade-up" data-aos-once="true">Get In Touch</h2>
+         <form data-aos="fade-up" data-aos-once="true">
+            <div class="row">
+               <div class="col-md-6 mb-md-3">
+                  <div class="form-group">
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">
+                              <i class="fas fa-user"></i>
+                           </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Name...">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">
+                              <i class="fas fa-at"></i>
+                           </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email...">
+                     </div>
+                  </div>
+                  <div class="input-group">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <i class="fas fa-phone"></i>
+                        </span>
+                     </div>
+                     <input type="text" class="form-control" placeholder="Phone number...">
+                  </div>
+               </div>
+               <div class="col-md-6 d-flex">
+                  <div class="input-group">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <i class="fas fa-envelope"></i>
+                        </span>
+                     </div>
+                     <textarea id="input-message" class="form-control" placeholder="Message..."></textarea>
+                  </div>
+               </div>
+            </div>
+            <input type="submit" class="btn btn-dark btn-block mt-3" value="Submit">
+         </form>
       </div>
    </section>
 

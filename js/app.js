@@ -40,7 +40,7 @@ $(document).ready(function () {
 
       $('html, body').animate(
         {
-          scrollTop: $(hash).offset().top - 70,
+          scrollTop: $(hash).offset().top - 50,
         },
         800
       );
